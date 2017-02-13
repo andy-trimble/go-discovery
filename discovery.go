@@ -79,12 +79,12 @@ func (d *Discovery) Start(role string) error {
 		return err
 	}
 	go d.announce(addr)
-	go d.serve(addr)
+	go d.listen(addr)
 
 	return nil
 }
 
-func (d *Discovery) serve(addr *net.UDPAddr) {
+func (d *Discovery) listen(addr *net.UDPAddr) {
 	c, err := net.ListenMulticastUDP("udp", nil, addr)
 	if err != nil {
 		d.Err <- err
