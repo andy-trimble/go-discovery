@@ -27,7 +27,6 @@ type config struct {
 	Interface     string        `default:"eth0"`
 	Group         string        `default:"230.1.1.1"`
 	Port          int           `default:"8989"`
-	TTL           int           `default:"1"`
 	AnnounceCount int           `default:"5"`
 	AnnounceWait  time.Duration `default:"500ms"`
 }
