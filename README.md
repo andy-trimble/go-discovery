@@ -1,5 +1,5 @@
 # go-discovery
-Muticast Discovery for Golang. This library is compatible with the Java impelemtation found [here](https://github.com/andy-trimble/discovery)
+Muticast Discovery for Golang. This library is compatible with the Java impelemtation found here https://github.com/andy-trimble/discovery.
 
 See the example for usage. Here's a basic example:
 
