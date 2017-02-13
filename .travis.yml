@@ -1,0 +1,12 @@
+language: go
+
+go:
+  - 1.6.x
+  - 1.7.x
+  - master
+
+install:
+  - go get github.com/kelseyhightower/envconfig
+  - go get github.com/satori/go.uuid
+
+script: go test ./...
