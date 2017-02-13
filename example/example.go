@@ -1,10 +1,9 @@
 package main
 
 import (
+	"bufio"
 	"log"
 	"os"
-	"os/signal"
-	"syscall"
 
 	discovery "github.com/andy-trimble/go.discovery"
 )
@@ -24,16 +23,14 @@ func main() {
 		}
 	}()
 
-	c := make(chan os.Signal, 2)
-	signal.Notify(c, os.Interrupt, syscall.SIGTERM)
 	go func() {
-		<-c
-		d.Shutdown()
-		os.Exit(0)
+		for {
+			err := <-d.Err
+			log.Printf("%+v", err)
+		}
 	}()
 
-	for {
-		err := <-d.Err
-		log.Printf("%+v", err)
-	}
+	log.Println("Press return to exit...")
+	reader := bufio.NewReader(os.Stdin)
+	reader.ReadString('\n')
 }
