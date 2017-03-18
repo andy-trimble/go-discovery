@@ -22,7 +22,7 @@ go func() {
 
 for {
 	err := <-d.Err
-    log.Printf("%+v", err)
+	log.Printf("%+v", err)
 }
 ```
 
