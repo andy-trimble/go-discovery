@@ -33,5 +33,5 @@ DISCOVERY_INTERFACE - The network interface to utilize - default: eth0
 DISCOVERY_GROUP - The multicast group - default: 230.1.1.1
 DISCOVERY_PORT - The multicast port - default: 8989
 DISCOVERY_ANNOUNCE_COUNT - The number of times to announce oneself - default: 5
-DISCOVERY_ANNOUNCH_WAIT - The duration between subsequent announcements - default: 500 ms
+DISCOVERY_ANNOUNCE_WAIT - The duration between subsequent announcements - default: 500 ms
 ```
